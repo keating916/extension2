@@ -1,8 +1,8 @@
   {
     "name": "String Extension",
-    "version": "1.0",
-    "description": "extension built to store a string",
-    "permissions": ["activeTab", "declarativeContent", "storage"],
+    "version": "1.1",
+    "description": "extension built to store a string as cookie",
+    "permissions": ["activeTab", "declarativeContent", "storage", "cookies", "https://www.prifina.com"],
     "background": {
       "scripts": ["scripts.js"],
       "persistent": false

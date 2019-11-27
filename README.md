@@ -1,9 +1,9 @@
 Chrome Extension
 
 Installation
-1a: If using the Command line, clone this repo to chosen folder: git@github.com:keating916/extension1.git
+1a: If using the Command line, clone this repo to chosen folder: git@github.com:keating916/extension2.git
 
-1b: If using browser GUI, navigate to: https://github.com/keating916/extension1, and download a zip file, then unzip the file
+1b: If using browser GUI, navigate to: https://github.com/keating916/extension2, and download a zip file, then unzip the file
 
 2: In Google Chrome, navigate to: chrome://extensions, and click on the developer mode toggle in the upper right hand corner
 
