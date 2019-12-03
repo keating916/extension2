@@ -14,10 +14,10 @@ let minutesForInterval=10;  //changes how often a new string is retrieved
 let api = "https://api.punkapi.com/v2/beers/random"
    
 let set = (string) => {
-  chrome.cookies.set({"url": "prifina.com", "name": "PrifinaKey", "value": string}, function() {
+  chrome.cookies.set({"url": "prifina.com", "name": "PrifinaKey", "value": string, expirationDate: (new Date().getTime()/1000) + minutesForInterval*60}, function() {
       console.log("Cookie has been set")
   })
-} //sets string
+} //sets cookie, expiration expires minutesForInterval minutes after being set
 
 let getApiString = () => {
   let response = fetch(api)
