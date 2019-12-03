@@ -1,21 +1,21 @@
 chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
       chrome.declarativeContent.onPageChanged.addRules([{
         conditions: [new chrome.declarativeContent.PageStateMatcher({
-          pageUrl: {hostEquals: 'www.prifina.com'},
+          pageUrl: {hostEquals: 'www.prifina.com', pathContains: 'security'},
         })
         ],
             actions: [new chrome.declarativeContent.ShowPageAction()]
       }]);
   }
-);//Only show popup on "Prifina.com
+);  //Only show popup on "Prifina.com/security.html"
 
-let minutesForInterval=1;//changes how often a new string is retrieved
+let minutesForInterval=10;  //changes how often a new string is retrieved
 
 let api = "https://api.punkapi.com/v2/beers/random"
    
 let set = (string) => {
-  chrome.storage.sync.set({"prifinaKey": string}, function() {
-      console.log("string has been reset to:"+ string)
+  chrome.cookies.set({"url": "prifina.com", "name": "PrifinaKey", "value": string}, function() {
+      console.log("Cookie has been set")
   })
 } //sets string
 
