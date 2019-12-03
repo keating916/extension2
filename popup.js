@@ -10,8 +10,7 @@ let ret = () => {
 }; //returns string set by set() in scripts.js and displays it in the popup
 ret();
 
-/*
+
 setInterval(function() {
     ret()
 }, 1000) // looks for updated String 1/second
-*/
