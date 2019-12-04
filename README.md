@@ -19,10 +19,12 @@ Using extension
 
 2: Click on the now active logo, and a string will appear.
 
-3: On extension tab click on background page link, you will see the same string.
+3: In a new tab, navigat to github.com.
 
-4: Right click on the extension, and click “Inspect Popup”
+4: Click on the logo again, you should see the same string
 
-5: On inspection pane, navigate to the “console”
+5: Right click on logo, and click inspect popup
 
-6: There, you should see the string update on this page and background page
+6: Navigate to console and you should see messages stating either that a new cookie is being requested, or that it had already been set.
+
+Cookie will expire after 30 minutes. A new cookie will not be retrieved automatically unless you navigate to either of the pages.
