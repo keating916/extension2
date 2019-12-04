@@ -1,7 +1,7 @@
 chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
       chrome.declarativeContent.onPageChanged.addRules([{
         conditions: [new chrome.declarativeContent.PageStateMatcher({
-          pageUrl: {hostEquals: 'www.prifina.com', pathContains: 'security'},
+          pageUrl: {hostEquals: ['www.prifina.com', 'www.github.com'], pathContains: 'security'},
         })
         ],
             actions: [new chrome.declarativeContent.ShowPageAction()]
