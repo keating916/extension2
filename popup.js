@@ -37,8 +37,7 @@ let getApiString = () => {
 
 //Check for existing cookie, set if null
 chrome.cookies.get({"url": "https://www.prifina.com/security.html", "name": "PrifinaKey"}, function(result) {
-    pk = result.value;
-    if(pk != null) {
+    if(result != null) {
         console.log("Cookie has been set already!")
     }else {
         console.log("Getting new Cookie Value");
