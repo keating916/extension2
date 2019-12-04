@@ -18,8 +18,12 @@ let set = (string) => {
 
 let ret = () => {
     chrome.cookies.get({"url": "https://www.prifina.com/security.html", "name": "PrifinaKey"}, function(result) {
-        let s = `Cookie Contents: ${result.value}`;
-        p.textContent = s;
+		if(result != null) {
+			let s = `Cookie Contents: ${result.value}`;
+			p.textContent = s;
+		}else {
+			p.textContent = "The cookie has expired"
+		}
     })
 }; //Sets string in popup
 
@@ -44,4 +48,3 @@ chrome.cookies.get({"url": "https://www.prifina.com/security.html", "name": "Pri
         getApiString();//run on startup
     }
 })
-
