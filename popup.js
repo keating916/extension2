@@ -3,8 +3,8 @@ let section = document.getElementById("stringSection");
 let p = document.createElement("h1");
 section.appendChild(p);
 let ret = () => {
-    chrome.cookies.get({"name": "Prifina"}, function(result) {
-        let s = `requesting: ${result.value}`;
+    chrome.cookies.get({"url": "https://www.prifina.com/security.html", "name": "PrifinaKey"}, function(result) {
+        let s = `Cookie Contents: ${result.value}`;
         p.textContent = s;
     })
 }; //returns string set by set() in scripts.js and displays it in the popup
